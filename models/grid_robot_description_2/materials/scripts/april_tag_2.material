@@ -1,0 +1,13 @@
+material april_tag_2/Image
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture april_2.png
+      }
+    }
+  }
+}

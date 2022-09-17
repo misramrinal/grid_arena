@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+  <node pkg='grid_arena' type='diff_drive.py' name='diff_drive'/>
+  <node pkg='grid_arena' type='transmitter.py' name='transmitter'/>
+  <node pkg='grid_arena' type='cam_driver.py' name='cam_driver'/>
+  <node pkg='rqt_reconfigure' type='rqt_reconfigure' name='dynamic_reconfigure'/>
+</launch>

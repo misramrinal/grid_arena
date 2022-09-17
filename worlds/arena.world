@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+    <world name="default">
+        <include>
+            <uri>model://sun</uri>
+        </include>
+
+        <model name="arena_ground">
+	    <pose>1.524 -0.762 0 0 0 0</pose>
+	    <include>
+                <uri>model://arena_ground</uri>
+            </include>
+        </model>
+
+        <model name="overhead_camera">
+            <include>
+                <uri>model://overhead_camera</uri>
+            </include>
+            <pose>1.524 -0.762 3.05 -1.57 1.57 0</pose>
+        </model>
+
+        <model name="grid_robot">
+            <pose>1.2954 -0.0692 0 0 0 -1.5884</pose>
+            <include>
+                <uri>model://grid_robot_description</uri>
+            </include>
+        </model>
+	      <!-- <model name="grid_robot_description_1">
+            <pose>1.4478 -0.0692 0 0 0 -1.5884</pose>
+            <include>
+                <uri>model://grid_robot_description_1</uri>
+            </include>
+        </model>
+	      <model name="grid_robot_description_2">
+            <pose>1.6002 -0.0692 0 0 0 -1.5884</pose>
+            <include>
+                <uri>model://grid_robot_description_2</uri>
+            </include>
+        </model>
+	      <model name="grid_robot_description_3">
+            <pose>1.7526 -0.0692 0 0 0 -1.5884</pose>
+            <include>
+                <uri>model://grid_robot_description_3</uri>
+            </include>
+        </model> -->
+
+        <model name="walls">
+            <static>true</static>
+            <pose>0 0 0 0 0 0</pose>
+            <link name="right_wall">
+                <collision name="right_wall_collision">
+                    <pose>2.889732 -1.349762 0.0127 0 0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.001 0.3048 0.0254</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="right_wall_visual">
+                    <pose>2.889732 -1.349762 0.0127 0 0 0</pose>
+                    <cast_shadows>false</cast_shadows>
+                    <geometry>
+                        <box>
+                            <size>0.001 0.3048 0.0254</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0.9 0.7 0.7 1</ambient>
+                        <diffuse>0.9 0.7 0.7 1</diffuse>
+                        <specular>0 0 0 0</specular>
+                        <emissive>0 0 0 1</emissive>
+                    </material>
+                </visual>
+            </link>
+            <link name="left_wall">
+                <collision name="left_wall_collision">
+                    <pose>0.152868 -1.349762 0.0127 0 0 0</pose>
+                    <geometry>
+                        <box>
+                            <size>0.001 0.3048 0.0254</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="left_wall_visual">
+                    <pose>0.152868 -1.349762 0.0127 0 0 0</pose>
+                    <cast_shadows>false</cast_shadows>
+                    <geometry>
+                        <box>
+                            <size>0.001 0.3048 0.0254</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0.9 0.7 0.7 1</ambient>
+                        <diffuse>0.9 0.7 0.7 1</diffuse>
+                        <specular>0 0 0 0</specular>
+                        <emissive>0 0 0 1</emissive>
+                    </material>
+                </visual>
+            </link>
+        </model>
+    </world>
+</sdf>
